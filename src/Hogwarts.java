@@ -14,7 +14,6 @@ public class Hogwarts {
         Ravenclaw padmaPatil = new Ravenclaw("Падма Патил", 5, 10, 9, 10, 1, 2);
         Ravenclaw marcusBelby = new Ravenclaw("Маркус Белби", 2, 4, 3, 4, 5, 6);
 
-
         harryPotter.getDescription();
         hermioneGranger.getDescription();
         ronWeasley.getDescription();
@@ -28,5 +27,11 @@ public class Hogwarts {
         padmaPatil.getDescription();
         marcusBelby.getDescription();
 
+        harryPotter.compareGryffindorStudents (harryPotter, hermioneGranger);
+        dracoMalfoy.compareSlytherinStudents (dracoMalfoy, grahamMontague);
+        zachariasSmith.compareHufflepuffStudents (zachariasSmith, cedricDiggory);
+        choChang.compareRavenclawStudents(choChang, padmaPatil);
+
+        gregoryGoyle.compareStudents (gregoryGoyle, justinFinchFletchley);
     }
 }
