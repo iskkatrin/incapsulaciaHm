@@ -37,5 +37,6 @@ public class Student {
         } else {
             System.out.println("Финч-Флетчли обладает большей мощностью магии, чем Грегори Гойл . ");
         }
+
     }
 }
