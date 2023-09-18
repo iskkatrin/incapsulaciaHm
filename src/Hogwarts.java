@@ -34,5 +34,6 @@ public class Hogwarts {
 
         gregoryGoyle.compareStudents (gregoryGoyle, justinFinchFletchley);
 
+
     }
 }
