@@ -14,25 +14,27 @@ public class Hogwarts {
         Ravenclaw padmaPatil = new Ravenclaw("Падма Патил", 5, 10, 9, 10, 1, 2);
         Ravenclaw marcusBelby = new Ravenclaw("Маркус Белби", 2, 4, 3, 4, 5, 6);
 
-        harryPotter.getDescription();
-        hermioneGranger.getDescription();
-        ronWeasley.getDescription();
-        dracoMalfoy.getDescription();
-        grahamMontague.getDescription();
-        gregoryGoyle.getDescription();
-        zachariasSmith.getDescription();
-        cedricDiggory.getDescription();
-        justinFinchFletchley.getDescription();
-        choChang.getDescription();
-        padmaPatil.getDescription();
-        marcusBelby.getDescription();
+
+        System.out.println(harryPotter);
+        System.out.println(hermioneGranger);
+        System.out.println(ronWeasley);
+        System.out.println(dracoMalfoy);
+        System.out.println(grahamMontague);
+        System.out.println(gregoryGoyle);
+        System.out.println(zachariasSmith);
+        System.out.println(cedricDiggory);
+        System.out.println(justinFinchFletchley);
+        System.out.println(choChang);
+        System.out.println(padmaPatil);
+        System.out.println(marcusBelby);
+
 
         harryPotter.compareGryffindorStudents (harryPotter, hermioneGranger);
         dracoMalfoy.compareSlytherinStudents (dracoMalfoy, grahamMontague);
         zachariasSmith.compareHufflepuffStudents (zachariasSmith, cedricDiggory);
         choChang.compareRavenclawStudents(choChang, padmaPatil);
 
-        gregoryGoyle.compareStudents (gregoryGoyle, justinFinchFletchley);
+        gregoryGoyle.compareStudents(justinFinchFletchley);
 
 
     }

@@ -29,14 +29,23 @@ public class Student {
         System.out.println("Расстояние трансгрессии: " + getTransgressionDistance());
     }
 
-    public void compareStudents (Student student1,Student student2) {
-        int sumStudent1 = student1.getMagicPower() + student1.getTransgressionDistance();
-        int sumStudent2 = student2.getMagicPower() + student2.getTransgressionDistance();
-        if (sumStudent1 > sumStudent2) {
-            System.out.println("Грегори Гойл обладает большей мощностью магии, чем Финч-Флетчли. ");
-        } else {
-            System.out.println("Финч-Флетчли обладает большей мощностью магии, чем Грегори Гойл . ");
-        }
+    @Override
+    public String toString() {
+        return "Имя: " + getName() +
+                "\n Магическая сила: " + getMagicPower() +
+                "\n Расстояние трансгрессии: " + getTransgressionDistance();
+    }
+
+
+
+        public void compareStudents(Student student) {
+            int sumThisStudent = this.getMagicPower() + this.getTransgressionDistance();
+            int sumOtherStudent = student.getMagicPower() + student.getTransgressionDistance();
+            if (sumThisStudent > sumOtherStudent) {
+                System.out.println(this.getName() + " обладает большей мощностью магии, чем " + student.getName());
+            } else {
+                System.out.println(student.getName() + " обладает большей мощностью магии, чем " + this.getName());
+            }
 
     }
 }
