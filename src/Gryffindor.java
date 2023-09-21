@@ -1,4 +1,4 @@
-public class Gryffindor extends Student{
+public class Gryffindor extends Student {
     private int nobility;
     private int honor;
     private int bravery;
@@ -10,12 +10,9 @@ public class Gryffindor extends Student{
         this.bravery = bravery;
     }
 
-    public void getDescription() {
-        super.getDescription();
-        System.out.println("Гриффиндорские качества:");
-        System.out.println("Благородство: " + nobility);
-        System.out.println("Честь: " + honor);
-        System.out.println("Храбрость: " + bravery);
+    @Override
+    public String toString() {
+        return super.toString() + "\n Благородство " + getNobility() + "\n Честь " + getHonor() + "\n Храбрость" + getBravery();
     }
 
     public int getNobility() {
@@ -30,17 +27,18 @@ public class Gryffindor extends Student{
         return bravery;
     }
 
-    public void compareGryffindorStudents(Gryffindor student1, Gryffindor student2) {
-        int sumStudent1 = student1.getNobility() + student1.getHonor() + student1.getBravery();
+
+    public void compareGryffindorStudents(Gryffindor student2) {
+
+        int sumStudent1 = this.getNobility() + this.getHonor() + this.getBravery();
         int sumStudent2 = student2.getNobility() + student2.getHonor() + student2.getBravery();
         if (sumStudent1 > sumStudent2) {
-            System.out.println(student1.getName() + " - лучший Гриффиндорец, чем Гермиона");
+            System.out.println(this.getName() + " - лучший Гриффиндорец, чем student2.getName()");
         } else if (sumStudent1 < sumStudent2) {
-            System.out.println(student2.getName() + " - лучший Гриффиндорец, чем Гарри Поттер");
+            System.out.println(student2.getName() + " - лучший Гриффиндорец, чем this.getName()");
         } else {
             System.out.println("Ученики Гриффиндора имеют одинаковую сумму свойств");
         }
     }
-
 
 }

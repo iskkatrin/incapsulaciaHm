@@ -37,15 +37,14 @@ public class Student {
     }
 
 
-
-        public void compareStudents(Student student) {
-            int sumThisStudent = this.getMagicPower() + this.getTransgressionDistance();
-            int sumOtherStudent = student.getMagicPower() + student.getTransgressionDistance();
-            if (sumThisStudent > sumOtherStudent) {
-                System.out.println(this.getName() + " обладает большей мощностью магии, чем " + student.getName());
-            } else {
-                System.out.println(student.getName() + " обладает большей мощностью магии, чем " + this.getName());
-            }
+    public void compareStudents(Student student) {
+        int sumThisStudent = this.getMagicPower() + this.getTransgressionDistance();
+        int sumOtherStudent = student.getMagicPower() + student.getTransgressionDistance();
+        if (sumThisStudent > sumOtherStudent) {
+            System.out.println(this.getName() + " обладает большей мощностью магии, чем " + student.getName());
+        } else {
+            System.out.println(student.getName() + " обладает большей мощностью магии, чем " + this.getName());
+        }
 
     }
 }

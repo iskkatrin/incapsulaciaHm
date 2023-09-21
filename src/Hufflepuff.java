@@ -10,13 +10,14 @@ public class Hufflepuff extends Student {
         this.honest = honest;
     }
 
-    public void getDescription() {
-        super.getDescription();
-        System.out.println("Качества Хаффлпаффа:");
-        System.out.println("Трудолюбивость: " + hardworking);
-        System.out.println("Лояльность: " + loyal);
-        System.out.println("Честность: " + honest);
+    @Override
+    public String toString() {
+        return super.toString()
+                + "\n Трудолюбивость " + getHardworking()
+                + "\n Лояльность " + getLoyal()
+                + "\n Честность" + getHonest() ;
     }
+
 
     public int getHardworking() {
         return hardworking;
@@ -30,15 +31,17 @@ public class Hufflepuff extends Student {
         return honest;
     }
 
-    public void compareHufflepuffStudents(Hufflepuff student1, Hufflepuff student2) {
-        int sumStudent1 = student1.getHardworking() + student1.getLoyal() + student1.getHonest();
+    public void compareHufflepuffStudents(Hufflepuff student2) {
+
+        int sumStudent1 = this.getHardworking() + this.getLoyal() + this.getHonest();
         int sumStudent2 = student2.getHardworking() + student2.getLoyal() + student2.getHonest();
         if (sumStudent1 > sumStudent2) {
-            System.out.println(student1.getName() + " - лучший Пуффендуйец, чем Седрик Диггори");
+            System.out.println(this.getName() + " - лучший Пуффендуйец, чем student2.getName()");
         } else if (sumStudent1 < sumStudent2) {
-            System.out.println(student2.getName() + " - лучший Пуффендуйец, чем Захария Смит");
+            System.out.println(student2.getName() + " - лучший Пуффендуйец, чем this.getName()");
         } else {
-            System.out.println("Ученики Пуффендуйя имеют одинаковую сумму свойств");
+            System.out.println("Ученики Слизерина имеют одинаковую сумму свойств");
         }
     }
+
 }

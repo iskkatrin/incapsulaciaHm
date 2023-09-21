@@ -29,10 +29,10 @@ public class Hogwarts {
         System.out.println(marcusBelby);
 
 
-        harryPotter.compareGryffindorStudents (harryPotter, hermioneGranger);
-        dracoMalfoy.compareSlytherinStudents (dracoMalfoy, grahamMontague);
-        zachariasSmith.compareHufflepuffStudents (zachariasSmith, cedricDiggory);
-        choChang.compareRavenclawStudents(choChang, padmaPatil);
+        harryPotter.compareGryffindorStudents(hermioneGranger);
+        dracoMalfoy.compareSlytherinStudents(grahamMontague);
+        zachariasSmith.compareHufflepuffStudents(cedricDiggory);
+        choChang.compareRavenclawStudents(padmaPatil);
 
         gregoryGoyle.compareStudents(justinFinchFletchley);
 

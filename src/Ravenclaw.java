@@ -12,15 +12,14 @@ public class Ravenclaw extends Student {
         this.FullOfCreativity = FullOfCreativity;
     }
 
-    public void getDescription() {
-        super.getDescription();
-        System.out.println("Качества Когтеврана:");
-        System.out.println("Ум: " + smart);
-        System.out.println("Мудрость: " + wise);
-        System.out.println("Остроумие: " + witty);
-        System.out.println("Полнота креатива: " + FullOfCreativity);
+    @Override
+    public String toString() {
+        return super.toString()
+                + "\n Ум " + getSmart()
+                + "\n Мудрость" + getWise()
+                + "\n Остроумие " + getWitty()
+                + "\n Полнота креатива " + getFullOfCreativity();
     }
-
 
     public int getSmart() {
         return smart;
@@ -39,15 +38,19 @@ public class Ravenclaw extends Student {
     }
 
 
-    public void compareRavenclawStudents(Ravenclaw student1, Ravenclaw student2) {
-        int sumStudent1 = student1.getSmart() + student1.getWise() + student1.getWitty() + student1.getFullOfCreativity();
+
+    public void compareRavenclawStudents(Ravenclaw student2) {
+
+        int sumStudent1 = this.getSmart() + this.getWise() + this.getWitty() + this.getFullOfCreativity();
         int sumStudent2 = student2.getSmart() + student2.getWise() + student2.getWitty() + student2.getFullOfCreativity();
         if (sumStudent1 > sumStudent2) {
-            System.out.println(student1.getName() + " - лучший Когтевранец, чем Падма Патил");
+            System.out.println(this.getName() + " - лучший Когтевранец, чем student2.getName()");
         } else if (sumStudent1 < sumStudent2) {
-            System.out.println(student2.getName() + " - лучший Когтевранец, чем Чо Чанг");
+            System.out.println(student2.getName() + " - лучший Когтевранец, чем this.getName()");
         } else {
-            System.out.println("Ученики Когтеврана имеют одинаковую сумму свойств");
+            System.out.println("Ученики Когтевранец имеют одинаковую сумму свойств");
         }
     }
+
+
 }
