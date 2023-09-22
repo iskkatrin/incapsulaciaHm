@@ -58,5 +58,4 @@ public class Slytherin extends Student {
             System.out.println("Ученики Слизерина имеют одинаковую сумму свойств");
         }
     }
-
 }
